@@ -23,9 +23,9 @@ public class Ahorcado {
 			do {
 				System.out.println("dime una letra");
 				vLetra[i] = leer.next();
-				palabra2 = subpalabra2[0] + subpalabra2[1] + subpalabra2[2] + subpalabra[3];
 				if (vLetra[i].equals(subpalabra[0]) || vLetra[i].equals(subpalabra[1]) || vLetra[i].equals(subpalabra[2]) || vLetra[i].equals(subpalabra[3]) ) {
 					System.out.println("la letra " + vLetra[i] + " esta en la palabra, tienes " + vidas + " vidas restantes");
+					palabra2 = subpalabra2[0] + subpalabra2[1] + subpalabra2[2] + subpalabra[3];
 					if (vLetra[i].equals(subpalabra[0])) {
 						subpalabra2[0] = vLetra[i];
 						System.out.println(vLetra[i]);
@@ -33,26 +33,25 @@ public class Ahorcado {
 						System.out.println(palabra2);
 					}
 					if (vLetra[i].equals(subpalabra[1])) {
+						subpalabra2[1] = vLetra[i];
 						System.out.println("  " + vLetra[i]);
 						System.out.println("- - - -");
-						subpalabra2[1] = vLetra[i];
 						System.out.println(palabra2);
 					}
 					if (vLetra[i].equals(subpalabra[2])) {
+						subpalabra2[2] = vLetra[i];
 						System.out.println("    " + vLetra[i]);
 						System.out.println("- - - -");
-						subpalabra2[2] = vLetra[i];
 						System.out.println(palabra2);
 					}
 					if (vLetra[i].equals(subpalabra[3])) {
+						subpalabra2[3] = vLetra[i];
 						System.out.println("      " + vLetra[i]);
 						System.out.println("- - - -");
-						subpalabra2[3] = vLetra[i];
 						System.out.println(palabra2);
 					}
-					
 				} else {
-					vidas = vidas-1;
+					vidas = vidas - 1;
 					System.out.println("la letra " + vLetra[i] + " no esta en la palabra,  tienes " + vidas + " vidas restantes\"");
 				}	
 			} while ( !palabra2.equals(palabra) && vidas != 0 );
