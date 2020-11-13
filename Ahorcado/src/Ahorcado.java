@@ -4,6 +4,7 @@ public class Ahorcado {
 
 	public static void main(String[] args) {
 		int vidas = 6;
+		int i = 0;
 		String palabra = "hola";
 		String palabra2 = "";
 		String subpalabra[] = new String[4];
@@ -19,40 +20,49 @@ public class Ahorcado {
 		subpalabra[3] = "a";
 		System.out.println("tienes 6 vidas para acertar la palabra");
 		Scanner leer = new Scanner(System.in);
-		for (int i = 0; i < vidas;) {
 			do {
 				System.out.println("dime una letra");
+				palabra2 = subpalabra2[0] + subpalabra2[1] + subpalabra2[2] + subpalabra[3];
 				vLetra[i] = leer.next();
 				if (vLetra[i].equals(subpalabra[0]) || vLetra[i].equals(subpalabra[1]) || vLetra[i].equals(subpalabra[2]) || vLetra[i].equals(subpalabra[3]) ) {
 					System.out.println("la letra " + vLetra[i] + " esta en la palabra, tienes " + vidas + " vidas restantes");
-					palabra2 = subpalabra2[0] + subpalabra2[1] + subpalabra2[2] + subpalabra[3];
 					if (vLetra[i].equals(subpalabra[0])) {
 						subpalabra2[0] = vLetra[i];
 						System.out.println(vLetra[i]);
 						System.out.println("- - - -");
-						System.out.println(palabra2);
-					}
-					if (vLetra[i].equals(subpalabra[1])) {
-						subpalabra2[1] = vLetra[i];
-						System.out.println("  " + vLetra[i]);
-						System.out.println("- - - -");
-						System.out.println(palabra2);
-					}
-					if (vLetra[i].equals(subpalabra[2])) {
-						subpalabra2[2] = vLetra[i];
-						System.out.println("    " + vLetra[i]);
-						System.out.println("- - - -");
-						System.out.println(palabra2);
-					}
-					if (vLetra[i].equals(subpalabra[3])) {
-						subpalabra2[3] = vLetra[i];
-						System.out.println("      " + vLetra[i]);
-						System.out.println("- - - -");
-						System.out.println(palabra2);
-					}
+		System.out.println(palabra2);
+						i=i+1;
+					} else {
+						if (vLetra[i].equals(subpalabra[1])) {
+							subpalabra2[1] = vLetra[i];
+							System.out.println("  " + vLetra[i]);
+							System.out.println("- - - -");
+							System.out.println(palabra2);
+							i=i+1;
+						} else {
+							if (vLetra[i].equals(subpalabra[2])) {
+								subpalabra2[2] = vLetra[i];
+								System.out.println("    " + vLetra[i]);
+								System.out.println("- - - -");
+								System.out.println(palabra2);
+								i=i+1;
+							} else {
+								if (vLetra[i].equals(subpalabra[3])) {
+									subpalabra2[3] = vLetra[i];
+									System.out.println("      " + vLetra[i]);
+									System.out.println("- - - -");
+									System.out.println(palabra2);
+									i=i+1;
+								}
+							}
+							}
+							}
+
+					
 				} else {
 					vidas = vidas - 1;
 					System.out.println("la letra " + vLetra[i] + " no esta en la palabra,  tienes " + vidas + " vidas restantes\"");
+					i = i+1;
 				}	
 			} while ( !palabra2.equals(palabra) && vidas != 0 );
 	
@@ -61,7 +71,7 @@ public class Ahorcado {
 		} else {
 			System.out.println("Felicidades has acertado la palabra secreta (" + palabra + ")");
 		}
-		}
+		
 			
 		
 	}
