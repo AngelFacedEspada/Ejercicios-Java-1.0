@@ -8,7 +8,7 @@ public class Ahorcado {
 		int i = 0;
 		
 		String vLetra[] = new String[100];
-		String palabra = "hola";
+		String palabra = "puto";
 		String palabra2 = "";
 		
 		String vAciertos[] = new String[4];
@@ -27,10 +27,10 @@ public class Ahorcado {
 		
 		String subpalabra[] = new String[4];
 		
-		subpalabra[0] = "h";
-		subpalabra[1] = "o";
-		subpalabra[2] = "l";
-		subpalabra[3] = "a";
+		subpalabra[0] = "p";
+		subpalabra[1] = "u";
+		subpalabra[2] = "t";
+		subpalabra[3] = "o";
 		
 		Scanner leer = new Scanner(System.in);
 		
