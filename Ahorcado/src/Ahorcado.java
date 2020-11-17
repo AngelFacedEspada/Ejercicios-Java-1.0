@@ -188,7 +188,6 @@ public class Ahorcado {
 			
 		if (vidas == 0) {
 			
-			System.out.println("GAME OVER");
 			System.out.println("        -------");
 			System.out.println("        |     |");
 			System.out.println("        |     O ");
@@ -196,6 +195,7 @@ public class Ahorcado {
 			System.out.println("        |    / 7");
 			System.out.println("        |      ");
 			System.out.println("------------------");
+			System.out.println("GAME OVER");
 			
 		} else {
 			
